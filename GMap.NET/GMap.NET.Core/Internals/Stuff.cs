@@ -23,10 +23,17 @@ namespace GMap.NET.Internals
             return attributes.Length > 0 ? attributes[0].Description : value.ToString();
         }
 
+#if !OSX
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll", EntryPoint = "SetCursorPos")]
         [return: System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.Bool)]
         public static extern bool SetCursorPos(int x, int y);
-
+#else
+        public static bool SetCursorPos(int x, int y)
+		{
+		    // FIXME: Should this always return true?
+            return true;
+		}
+#endif
         public static readonly Random Random = new Random();
 
         public static void Shuffle<T>(List<T> deck)

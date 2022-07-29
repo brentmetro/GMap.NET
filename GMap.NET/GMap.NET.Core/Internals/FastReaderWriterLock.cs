@@ -1,12 +1,15 @@
-﻿#if !MONO
+﻿#if (!MONO && !OSX)
 #define UseFastResourceLock
 #endif
 using System;
 using System.Runtime.InteropServices;
+#if OSX
+using System.Threading;
+#endif
 
 namespace GMap.NET.Internals
 {
-#if !MONO
+#if (!MONO && !OSX)
 #endif
 
     /// <summary>
@@ -17,7 +20,7 @@ namespace GMap.NET.Internals
     /// </summary>
     public sealed class FastReaderWriterLock : IDisposable
     {
-#if !MONO
+#if (!MONO && !OSX)
         private static class NativeMethods
         {
             // Methods
@@ -85,7 +88,7 @@ namespace GMap.NET.Internals
 
         public void AcquireReaderLock()
         {
-#if !MONO
+#if (!MONO && !OSX)
             if (UseNativeSRWLock)
             {
                 NativeMethods.AcquireSRWLockShared(ref _lockSRW);
@@ -121,7 +124,7 @@ namespace GMap.NET.Internals
 
         public void ReleaseReaderLock()
         {
-#if !MONO
+#if (!MONO && !OSX)
             if (UseNativeSRWLock)
             {
                 NativeMethods.ReleaseSRWLockShared(ref _lockSRW);
@@ -142,7 +145,7 @@ namespace GMap.NET.Internals
         {
             try
             {
-#if !MONO
+#if (!MONO && !OSX)
                 if (UseNativeSRWLock)
                 {
                     NativeMethods.AcquireSRWLockExclusive(ref _lockSRW);
@@ -174,7 +177,7 @@ namespace GMap.NET.Internals
         {
             try
             {
-#if !MONO
+#if (!MONO && !OSX)
                 if (UseNativeSRWLock)
                 {
                     NativeMethods.ReleaseSRWLockExclusive(ref _lockSRW);

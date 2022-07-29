@@ -150,11 +150,13 @@ namespace GMap.NET.Internals
 
         private Cache()
         {
+#if !OSX
 #if SQLite
             ImageCache = new SQLitePureImageCache();
 #else
          // you can use $ms stuff if you like too ;}
          ImageCache = new MsSQLCePureImageCache();
+#endif
 #endif
 
             {

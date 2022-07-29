@@ -27,6 +27,9 @@ https://github.com/judero01col/GMap.NET/blob/master/README.md#release-notes
     <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^netcoreapp\d'))">
         <DefineConstants>NETCORE;MONO_disabled;SQLite;MySQL_disabled;PostgreSQL_disabled;$(DefineConstants)</DefineConstants>
     </PropertyGroup>
+    <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">
+        <DefineConstants>OSX;$(DefineConstants)</DefineConstants>
+    </PropertyGroup>
     
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

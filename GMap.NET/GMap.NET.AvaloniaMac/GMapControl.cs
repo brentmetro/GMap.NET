@@ -351,7 +351,7 @@ namespace GMap.NET.Avalonia
                 case nameof(Zoom):
                     ZoomPropertyChanged(
                         this,
-                        change.OldValue.GetValueOrDefault<double>(),
+                        change.NewValue.GetValueOrDefault<double>(),
                         change.OldValue.GetValueOrDefault<double>(),
                         ZoomMode.XY);
                     break;
@@ -359,7 +359,7 @@ namespace GMap.NET.Avalonia
                 case nameof(ZoomX):
                     ZoomPropertyChanged(
                        this,
-                       change.OldValue.GetValueOrDefault<double>(),
+                       change.NewValue.GetValueOrDefault<double>(),
                        change.OldValue.GetValueOrDefault<double>(),
                        ZoomMode.X);
                     break;
@@ -367,7 +367,7 @@ namespace GMap.NET.Avalonia
                 case nameof(ZoomY):
                     ZoomPropertyChanged(
                        this,
-                       change.OldValue.GetValueOrDefault<double>(),
+                       change.NewValue.GetValueOrDefault<double>(),
                        change.OldValue.GetValueOrDefault<double>(),
                        ZoomMode.Y);
                     break;

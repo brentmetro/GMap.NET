@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Media;
 
-namespace GMap.NET.Avalonia
+namespace GMap.NET.AvaloniaMac
 {
     public static class TransformHelper
     {

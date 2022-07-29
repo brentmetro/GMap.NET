@@ -5,7 +5,7 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using GMap.NET.MapProviders;
 
-namespace GMap.NET.Avalonia
+namespace GMap.NET.AvaloniaMac
 {
     /// <summary>
     ///     image abstraction

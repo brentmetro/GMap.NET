@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Avalonia;
 using Avalonia.VisualTree;
 
-namespace GMap.NET.Avalonia
+namespace GMap.NET.AvaloniaMac
 {
     /// <summary>
     ///     GMap.NET marker

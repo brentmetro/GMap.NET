@@ -21,7 +21,7 @@ using GMap.NET.Internals;
 using GMap.NET.MapProviders;
 using GMap.NET.Projections;
 
-namespace GMap.NET.Avalonia
+namespace GMap.NET.AvaloniaMac
 {
     /// <summary>
     ///     GMap.NET control for Windows Presentation

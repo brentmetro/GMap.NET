@@ -3,7 +3,7 @@ using Avalonia;
 using Avalonia.Controls.Shapes;
 using Avalonia.Media;
 
-namespace GMap.NET.Avalonia
+namespace GMap.NET.AvaloniaMac
 {
     public interface IShapable
     {

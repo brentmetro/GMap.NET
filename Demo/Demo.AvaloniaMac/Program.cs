@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace Demo.AvaloniaUi
+namespace Demo.AvaloniaMac
 {
     class Program
     {

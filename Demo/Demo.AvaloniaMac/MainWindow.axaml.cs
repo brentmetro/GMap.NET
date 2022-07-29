@@ -3,10 +3,10 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using GMap.NET;
-using GMap.NET.Avalonia;
+using GMap.NET.AvaloniaMac;
 using GMap.NET.MapProviders;
 
-namespace Demo.AvaloniaUi
+namespace Demo.AvaloniaMac
 {
     public partial class MainWindow : Window
     {

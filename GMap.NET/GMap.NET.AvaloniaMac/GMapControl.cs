@@ -1574,7 +1574,7 @@ namespace GMap.NET.Avalonia
         }
 
         public Pen CenterCrossPen { get; } = new Pen(Brushes.Red, 1);
-        public bool ShowCenter { get; } = true;
+        public bool ShowCenter { get; set; } = true;
 
 #if DEBUG
         private readonly Pen _virtualCenterCrossPen = new Pen(Brushes.Blue, 2);
